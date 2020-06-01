@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">videoDownloader</string>
+    <string name="title_activity_dashboard">Dashboard</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="home_second">Home Second</string>
+
+
+    <string name="app_name1">Toolbar ActionMode Demo</string>
+
+    <string name="hello_world">Hello world!</string>
+
+
+    <!--  Action Mode Menu Items -->
+    <string name="delete">Delete</string>
+    <string name="pause">Pause</string>
+    <string name="stop">Stop</string>
+    <string name="share">Share</string>
+
+
+
+
+    <string-array name="download">
+        <item>144p</item>
+        <item>240p</item>
+        <item>360p</item>
+
+    </string-array>
+
+</resources>

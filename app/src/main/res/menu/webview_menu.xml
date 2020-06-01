@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <item
+        android:id="@+id/download"
+        android:icon="@drawable/ic_downward"
+        android:title="download"
+        app:showAsAction="always">
+
+    </item>
+
+    <item
+        android:id="@+id/downloadCustom"
+        android:icon="@drawable/ic_downward"
+        android:title="download"
+        app:showAsAction="collapseActionView">
+
+        <item
+            android:id="@+id/quality1"
+            android:icon="@drawable/ic_history_black_24dp"
+            android:title="144p"
+            app:showAsAction="collapseActionView" />
+
+        <item
+            android:id="@+id/quality2"
+            android:icon="@drawable/ic_downward"
+            android:title="240p"
+            app:showAsAction="collapseActionView" />
+
+        <item
+            android:id="@+id/quality3"
+            android:icon="@drawable/ic_downward"
+            android:title="360p"
+            app:showAsAction="collapseActionView" />
+
+
+    </item>
+
+    <item
+        android:id="@+id/backward"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_keyboard_arrow_left_black_24dp"
+        android:title="backward">
+
+    </item>
+
+    <item
+        app:showAsAction="always"
+        android:id="@+id/forward" android:icon="@drawable/ic_keyboard_arrow_right_black_24dp"
+        android:title="forward">
+
+    </item>
+
+<item
+    app:showAsAction="collapseActionView"
+    android:id="@+id/refresh"
+    android:icon="@drawable/ic_refresh_black_24dp"
+    android:title="Refresh"/>
+
+
+    <item
+        app:showAsAction="collapseActionView"
+        android:id="@+id/history"
+        android:icon="@drawable/ic_history_black_24dp"
+        android:title="History"/>
+
+    <item
+        app:showAsAction="collapseActionView"
+        android:id="@+id/downloads"
+        android:icon="@drawable/ic_downward"
+        android:title="Downloads"/>
+
+
+
+</menu>
