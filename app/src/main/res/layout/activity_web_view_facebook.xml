@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+<!--<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--android:id="@+id/my_swipe_refresh_facebook"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:orientation="vertical">-->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+    <LinearLayout
+        android:id="@+id/my_linear_layout_facebook"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal">
+        <ProgressBar
+            android:id="@+id/my_progress_bar-facebook"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_weight="0.1"
+            />
+
+        <ImageView
+            android:id="@+id/my_img_view_facebook"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.9"
+            android:src="@mipmap/ic_launcher"
+            android:contentDescription="Logo"/>
+
+    </LinearLayout>
+<EditText
+    android:id="@+id/txtLinkfacebook"
+    android:visibility="gone"
+    android:hint="Paste Link Here"
+    android:layout_width="match_parent"
+    android:layout_height="50dp" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <WebView
+        android:id="@+id/web_view_facebook"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+        <LinearLayout
+            android:id="@+id/fabLAyoutFB"
+            android:layout_width="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="20dp"
+            android:visibility="gone"
+            android:layout_marginLeft="300dp"
+            android:layout_height="wrap_content">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab_facebook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/black"
+                    android:src="@drawable/ic_download_black_24dp"/>
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Note: Click on Play Button starts the Downloading from Facebook Account."
+            android:textColor="@color/red"
+            android:textSize="@dimen/_12sdp" />
+
+        <!--</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>-->
+
+    </RelativeLayout>
+
+
+<LinearLayout
+android:visibility="gone"
+android:id="@+id/formatsLayoutFB"
+android:layout_width="match_parent"
+android:layout_gravity="bottom"
+android:background="@color/black"
+android:orientation="vertical"
+android:layout_height="290dp">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:cardCornerRadius="20dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="bottom"
+            android:background="@color/black"
+            android:orientation="vertical"
+            android:layout_height="270dp">
+<FrameLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="2dp"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/imgfIrstFB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_radio_button_unchecked_black_24dp"/>
+    <TextView
+        android:id="@+id/txtfirstFB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_marginLeft="25dp"
+        android:textColor="@color/black"
+        android:text="1280*720(MP4 720P HD)" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:layout_gravity="right"
+        android:text="16.19M"/>
+</FrameLayout>
+<FrameLayout
+
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:layout_marginTop="2dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/imSEcondFB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_radio_button_unchecked_black_24dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_marginLeft="25dp"
+        android:textColor="@color/black"
+        android:id="@+id/txtSecondFB"
+        android:text="640*360(MP4 360P HD)" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:layout_gravity="right"
+        android:text="4.72M"/>
+</FrameLayout>
+<FrameLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:layout_marginTop="2dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/imgThhirdFB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_radio_button_unchecked_black_24dp"/>
+    <TextView
+        android:id="@+id/ttxtTThiredFB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_marginLeft="25dp"
+        android:textColor="@color/black"
+        android:text="640*360(WEBM 360P HD)" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:layout_gravity="right"
+        android:text="4.13M"/>
+</FrameLayout>
+<FrameLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:layout_marginTop="2dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/imgFourthFB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_radio_button_unchecked_black_24dp"/>
+    <TextView
+        android:id="@+id/txtFourthFB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_marginLeft="25dp"
+        android:textColor="@color/black"
+        android:text="320*240(3GP 240P)" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:layout_gravity="right"
+        android:text="2.98M"/>
+</FrameLayout>
+<FrameLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:layout_marginTop="2dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/imgFifthFB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_radio_button_unchecked_black_24dp"/>
+    <TextView
+        android:id="@+id/txtFiftFB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_marginLeft="25dp"
+        android:textColor="@color/black"
+        android:text="176*144(3GP 144P HD)" />
+
+</FrameLayout>
+<FrameLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:layout_marginTop="2dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/imgSixthFB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_radio_button_unchecked_black_24dp"/>
+    <TextView
+        android:id="@+id/txtSixthFB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22dp"
+        android:layout_marginLeft="25dp"
+        android:textColor="@color/black"
+        android:text="MUSIC-M4A)" />
+
+</FrameLayout>
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:layout_marginTop="2dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="92dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/gray"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_height="50dp">
+        <androidx.cardview.widget.CardView
+            android:layout_width="87dp"
+            app:cardCornerRadius="10dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_height="46dp">
+            <ImageView
+                android:layout_width="27dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="6dp"
+                android:src="@drawable/ic_play_arrow_black_24dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="5dp"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:id="@+id/btnPlayVideoFB"
+                android:text="Play"/>
+        </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="95dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/gray"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="5dp"
+        android:layout_height="50dp">
+        <androidx.cardview.widget.CardView
+            android:layout_width="97dp"
+            app:cardCornerRadius="10dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_height="46dp">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/ic_add_box_black_24dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="5dp"
+                android:textStyle="bold"
+                android:id="@+id/btnAddVideoFB"
+                android:textSize="25dp"
+                android:text="Add"/>
+        </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="132dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/red"
+        android:layout_marginLeft="218dp"
+        android:layout_marginTop="5dp"
+        android:layout_height="50dp">
+        <androidx.cardview.widget.CardView
+            android:layout_width="146dp"
+            app:cardCornerRadius="10dp"
+            android:layout_marginLeft="2dp"
+            app:cardBackgroundColor="@color/red"
+            android:layout_marginTop="2dp"
+            android:layout_height="46dp">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="2dp"
+                android:src="@drawable/ic_download_black_24dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:id="@+id/btnDownloadVideoBtnFB"
+                android:textColor="@color/white"
+                android:text="Download"/>
+        </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+</LinearLayout>
+
+    </FrameLayout>

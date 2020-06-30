@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="wrap_content"
+<FrameLayout android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android" >
-<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-    android:id="@+id/my_swipe_refresh"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+<!--<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--android:id="@+id/my_swipe_refresh"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:orientation="vertical">-->
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -37,37 +41,543 @@
             android:src="@mipmap/ic_launcher"
             android:contentDescription="Logo"/>
 
-
-
-
     </LinearLayout>
-
-    <WebView
-        android:id="@+id/web_view"
+<EditText
+    android:id="@+id/txtLink"
+    android:visibility="gone"
+    android:hint="Paste Link Here"
+    android:layout_width="match_parent"
+    android:layout_height="50dp" />
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent">
 
-    </WebView>
+        <WebView
+            android:id="@+id/web_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:addStatesFromChildren="true" />
 
+        <LinearLayout
+            android:id="@+id/fabLAyout"
+            android:layout_width="match_parent"
+            android:layout_gravity="bottom"
+            android:gravity="right"
+            android:layout_height="wrap_content">
 
-
-
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:background="@color/black"
+                android:src="@drawable/ic_download_black_24dp"/>
+        </LinearLayout>
+</FrameLayout>
 
 </LinearLayout>
 
 
-</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/folder"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="260dp"
-        android:layout_marginTop="550dp"
-        android:onClick="openFolder"
-        android:scaleType="center"
-        android:src="@drawable/folder2"
-        app:backgroundTint="#E30707"
-        app:fabCustomSize="80dp" />
 
 </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/formatsLayout"
+            android:layout_width="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="bottom"
+            android:padding="@dimen/_5sdp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_height="match_parent">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/closebtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_closeicon"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_80sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="1"
+                        >
+                        <ImageView
+                            android:id="@+id/videoImage"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.7"
+                            />
+
+                        <TextView
+                            android:id="@+id/videoTitle"
+                            android:layout_width="@dimen/_190sdp"
+                            android:layout_height="match_parent"
+                            android:fontFamily="monospace"
+                            android:inputType="textMultiLine"
+                            android:padding="@dimen/_12sdp"
+                            android:scrollHorizontally="false"
+                            android:singleLine="false"
+                            android:text="Track) | CHHICHORE | Sushant,dsfsdfsdfsfsdfsdf"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13sdp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/playlist_foundlayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_marginLeft="@dimen/_6sdp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Play List Found in the link!! Tab to Show List"
+                            android:textSize="@dimen/_12sdp"
+                            android:textColor="@color/red"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/showlist"
+                            android:src="@drawable/ic_eye"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:weightSum="1"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.75"
+
+                            android:textSize="@dimen/_10sdp"
+                            android:text="Path:/storage/emulated/0/YoutubeVideoDownload"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="CHANGE"
+                            android:layout_gravity="right"
+                            android:gravity="right"
+                            android:layout_weight="0.1"
+                            android:textColor="@android:color/holo_blue_bright"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:weightSum="1">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_weight="0.1">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_20sdp"
+                                android:src="@mipmap/ic_music"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="Music"
+                                android:textSize="@dimen/_12sdp"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center|left"
+                                />
+                        </LinearLayout>
+                        <ListView
+                            android:visibility="gone"
+                            android:id="@+id/audiolist"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_100sdp"
+                            android:layout_weight="0.7"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/videoLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:weightSum="1">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_weight="0.1">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_20sdp"
+                                android:src="@mipmap/ic_video"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="Video"
+                                android:textSize="@dimen/_12sdp"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center|left"
+                                />
+                        </LinearLayout>
+                        <ListView
+                            android:id="@+id/videolist"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_200sdp"
+                            android:layout_weight="0.7"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/playlist_Layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:weightSum="1">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_weight="0.1">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_20sdp"
+                                android:src="@mipmap/ic_video"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="PlayList Found"
+                                android:textSize="@dimen/_12sdp"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center|left"
+                                />
+                        </LinearLayout>
+                        <ListView
+                            android:id="@+id/playlist_listview"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_200sdp"
+                            android:layout_weight="0.7"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:weightSum="1">
+                        <Button
+                            android:id="@+id/download"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:text="Download"
+                            android:layout_weight="0.4"
+                            android:textColor="@color/white"
+                            android:drawableLeft="@mipmap/ic_download"
+                            android:background="@color/red"/>
+                        <Button
+                            android:id="@+id/downloadlater"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:text="Add in Queue"
+                            android:layout_weight="0.6"
+                            android:textColor="@color/white"
+                            android:padding="@dimen/_5sdp"
+                            android:drawableLeft="@drawable/ic_clock"
+                            android:background="@color/red"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+<!--    <LinearLayout-->
+
+<!--        android:visibility="visible"-->
+<!--        android:id="@+id/formatsLayout"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_gravity="bottom"-->
+<!--        android:padding="@dimen/_5sdp"-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_height="match_parent">-->
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:layout_width="match_parent"-->
+<!--        app:cardCornerRadius="20dp"-->
+<!--        android:layout_marginLeft="10dp"-->
+<!--        android:layout_marginRight="10dp"-->
+<!--        android:layout_marginTop="10dp"-->
+
+<!--        android:layout_height="wrap_content">-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_gravity="bottom"-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_height="wrap_content">-->
+<!--        <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:background="@color/white"-->
+<!--            android:layout_marginLeft="5dp"-->
+<!--            android:layout_marginRight="5dp"-->
+<!--            android:layout_marginTop="@dimen/_5sdp"-->
+<!--            android:weightSum="1"-->
+<!--        android:layout_height="wrap_content">-->
+<!--            <ImageView-->
+<!--                android:id="@+id/imgfIrst"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/ic_radio_button_unchecked_black_24dp"/>-->
+<!--        <TextView-->
+<!--            android:id="@+id/txtfirst"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textSize="@dimen/_12sdp"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:text="1280*720(MP4 720P HD)" />-->
+<!--            <TextView-->
+<!--            android:layout_width="fill_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textSize="@dimen/_10sdp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:layout_gravity="center|right"-->
+<!--            android:gravity="right"-->
+<!--            android:text="16.19M"/>-->
+<!--    </LinearLayout>-->
+<!--        <LinearLayout-->
+
+<!--            android:layout_width="match_parent"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:background="@color/white"-->
+<!--            android:layout_marginTop="2dp"-->
+<!--            android:layout_marginLeft="5dp"-->
+<!--            android:layout_marginRight="5dp"-->
+<!--            android:layout_height="wrap_content">-->
+<!--            <ImageView-->
+<!--                android:id="@+id/imSEcond"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:src="@drawable/ic_radio_button_unchecked_black_24dp"/>-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="@dimen/_12sdp"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:id="@+id/txtSecond"-->
+<!--                android:text="640*360(MP4 360P HD)" />-->
+<!--            <TextView-->
+<!--                android:layout_width="fill_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="@dimen/_10sdp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:layout_gravity="center|right"-->
+<!--                android:gravity="right"-->
+<!--                android:text="4.72M"/>-->
+<!--        </LinearLayout>-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:background="@color/white"-->
+<!--            android:layout_marginTop="2dp"-->
+<!--            android:layout_marginLeft="5dp"-->
+<!--            android:layout_marginRight="5dp"-->
+<!--            android:layout_height="wrap_content">-->
+<!--            <ImageView-->
+<!--                android:id="@+id/imgThhird"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:src="@drawable/ic_radio_button_unchecked_black_24dp"/>-->
+<!--            <TextView-->
+<!--                android:id="@+id/ttxtTThired"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+
+<!--                android:textSize="@dimen/_12sdp"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:text="640*360(WEBM 360P HD)" />-->
+<!--            <TextView-->
+<!--                android:layout_width="fill_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="@dimen/_10sdp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:gravity="right"-->
+<!--                android:layout_gravity="center|right"-->
+<!--                android:layout_marginRight="@dimen/_2sdp"-->
+<!--                android:text="4.13M"/>-->
+<!--        </LinearLayout>-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:background="@color/white"-->
+<!--            android:layout_marginTop="2dp"-->
+<!--            android:layout_marginLeft="5dp"-->
+<!--            android:layout_marginRight="5dp"-->
+<!--            android:layout_height="wrap_content">-->
+<!--            <ImageView-->
+<!--                android:id="@+id/imgFourth"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:src="@drawable/ic_radio_button_unchecked_black_24dp"/>-->
+<!--            <TextView-->
+<!--                android:id="@+id/txtFourth"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textColor="@color/black"-->
+
+<!--                android:textSize="@dimen/_12sdp"-->
+<!--                android:text="320*240(3GP 240P)" />-->
+<!--            <TextView-->
+<!--                android:layout_width="fill_parent"-->
+<!--                android:layout_height="wrap_content"-->
+
+<!--                android:textSize="@dimen/_10sdp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:gravity="right"-->
+<!--                android:layout_gravity="center|right"-->
+<!--                android:layout_marginRight="@dimen/_2sdp"-->
+<!--                android:text="2.98M"/>-->
+<!--        </LinearLayout>-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:layout_marginLeft="5dp"-->
+<!--            android:layout_marginRight="5dp"-->
+<!--            android:background="@color/white"-->
+<!--            android:layout_marginTop="2dp"-->
+<!--            android:layout_height="wrap_content">-->
+<!--            <ImageView-->
+<!--                android:id="@+id/imgFifth"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:src="@drawable/ic_radio_button_unchecked_black_24dp"/>-->
+<!--            <TextView-->
+<!--                android:id="@+id/txtFift"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textColor="@color/black"-->
+
+<!--                android:textSize="@dimen/_12sdp"-->
+<!--                android:text="176*144(3GP 144P HD)" />-->
+
+<!--        </LinearLayout>-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:background="@color/white"-->
+<!--            android:layout_marginTop="2dp"-->
+<!--            android:layout_marginLeft="5dp"-->
+<!--            android:layout_marginRight="5dp"-->
+<!--            android:layout_height="wrap_content">-->
+<!--            <ImageView-->
+<!--                android:id="@+id/imgSixth"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:src="@drawable/ic_radio_button_unchecked_black_24dp"/>-->
+<!--            <TextView-->
+<!--                android:id="@+id/txtSixth"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="@dimen/_12sdp"-->
+<!--                android:layout_marginLeft="25dp"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:text="MUSIC-M4A)" />-->
+
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:background="@color/white"-->
+<!--            android:layout_marginTop="2dp"-->
+<!--            android:layout_marginLeft="5dp"-->
+<!--            android:layout_marginRight="5dp"-->
+<!--            android:layout_marginBottom="@dimen/_5sdp"-->
+<!--            android:layout_height="wrap_content">-->
+
+<!--           <androidx.cardview.widget.CardView-->
+<!--               android:layout_width="86dp"-->
+<!--               app:cardCornerRadius="10dp"-->
+<!--               app:cardBackgroundColor="@android:color/holo_green_dark"-->
+<!--               android:layout_marginLeft="2dp"-->
+<!--               android:layout_marginTop="2dp"-->
+
+<!--               android:layout_height="46dp">-->
+<!--               <ImageView-->
+<!--                   android:layout_width="30dp"-->
+<!--                   android:layout_height="40dp"-->
+<!--                   android:layout_marginTop="5dp"-->
+<!--                   android:layout_marginLeft="6dp"-->
+<!--                   android:src="@drawable/ic_play_arrow_black_24dp"/>-->
+<!--               <TextView-->
+<!--                   android:layout_width="wrap_content"-->
+<!--                   android:layout_height="wrap_content"-->
+<!--                   android:layout_marginLeft="35dp"-->
+
+<!--                   android:layout_gravity="left|center"-->
+<!--                   android:textSize="@dimen/_13sdp"-->
+<!--                   android:textColor="@color/black"-->
+<!--                   android:id="@+id/btnPlayVideo"-->
+<!--                   android:text="Play"/>-->
+<!--           </androidx.cardview.widget.CardView>-->
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                app:cardCornerRadius="10dp"-->
+<!--                app:cardBackgroundColor="@color/red"-->
+<!--                android:layout_marginLeft="@dimen/_50sdp"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:layout_height="match_parent">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="10dp"-->
+<!--                        android:layout_marginLeft="2dp"-->
+<!--                        android:rotation="90"-->
+<!--                        android:src="@drawable/ic_play_arrow_black_24dp"/>-->
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginLeft="30dp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        android:layout_gravity="left|center"-->
+<!--                        android:textSize="@dimen/_13sdp"-->
+<!--                        android:id="@+id/btnDownloadVideoBtn"-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:text="Download"/>-->
+<!--            </androidx.cardview.widget.CardView>-->
+
+<!--        </LinearLayout>-->
+
+<!--    </LinearLayout>-->
+<!--    </androidx.cardview.widget.CardView>-->
+<!--    </LinearLayout>-->
+
+</FrameLayout>

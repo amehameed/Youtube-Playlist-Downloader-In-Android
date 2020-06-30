@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="176dp"
+    android:background="#fff"
+
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="75dp"
+        android:layout_height="65dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="35dp"
+        android:layout_weight="0"
+        android:orientation="horizontal"
+        android:src="@mipmap/ic_navlogo" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_weight="0"
+        android:orientation="vertical"
+        android:text="PL Downloader"
+        android:textSize="15sp"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/grey_60"
+
+        android:textStyle="bold" />
+
+
+
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:textAlignment="center"
+        android:layout_weight="0"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:text="What's New"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColorHighlight="#FFFFFF"
+        android:textSize="10sp"
+        android:textStyle="bold|italic"
+        android:textColor="@color/grey_60"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="350dp"
+        android:layout_height="1dp"
+        android:layout_weight="0"
+        android:background="@color/grey_60"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="15dp"
+
+        />
+
+
+
+</LinearLayout>

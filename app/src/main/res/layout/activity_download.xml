@@ -28,26 +28,10 @@
             app:tabIndicatorColor="@android:color/white"
             app:tabIndicatorHeight="4dp"/>
     </com.google.android.material.appbar.AppBarLayout>
-
-
-
     <!-- Helps handing the Fragments for each Tab -->
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-         />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/folder"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="260dp"
-        android:layout_marginTop="550dp"
-        android:onClick="openFolder"
-        android:scaleType="center"
-        android:src="@drawable/folder2"
-        app:backgroundTint="#E30707"
-        app:fabCustomSize="80dp" />
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.HomeActivity">
+<!--    <FrameLayout-->
+<!--        android:id="@+id/mainfragment"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"/>-->
+<!--    <com.gauravk.bubblenavigation.BubbleNavigationConstraintView-->
+<!--        android:id="@+id/top_navigation_constraint"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@color/white"-->
+<!--        android:elevation="4dp"-->
+<!--        android:padding="12dp"-->
+<!--        app:bnc_mode="packed"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent">-->
+
+<!--        <com.gauravk.bubblenavigation.BubbleToggleView-->
+<!--            android:id="@+id/item_home"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:bt_active="true"-->
+<!--            app:bt_colorActive="@color/homecolor"-->
+<!--            app:bt_colorInactive="@color/inactive"-->
+<!--            app:bt_icon="@drawable/ic_home"-->
+<!--            app:bt_padding="@dimen/_5sdp"-->
+<!--            app:bt_title="Home"-->
+<!--            app:bt_titlePadding="@dimen/_2sdp" />-->
+
+<!--        <com.gauravk.bubblenavigation.BubbleToggleView-->
+<!--            android:id="@+id/item_download"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:bt_active="true"-->
+<!--            app:bt_colorActive="@color/downlaodcolor"-->
+<!--            app:bt_colorInactive="@color/inactive"-->
+<!--            app:bt_icon="@mipmap/ic_download"-->
+<!--            app:bt_padding="@dimen/_5sdp"-->
+<!--            app:bt_title="Downlaod"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/item_home"-->
+<!--            tools:layout_editor_absoluteY="0dp" />-->
+<!--        <com.gauravk.bubblenavigation.BubbleToggleView-->
+<!--            android:id="@+id/item_fav"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:bt_active="true"-->
+<!--            app:bt_colorActive="@color/favcolor"-->
+<!--            app:bt_colorInactive="@color/inactive"-->
+<!--            app:bt_icon="@drawable/ic_favorite_black_24dp"-->
+<!--            app:bt_padding="@dimen/_5sdp"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/item_download"-->
+<!--            tools:layout_editor_absoluteY="0dp"-->
+<!--            app:bt_title="Favourite"/>-->
+
+<!--        &lt;!&ndash; Add more child items here - max upto 5 &ndash;&gt;-->
+
+<!--    </com.gauravk.bubblenavigation.BubbleNavigationConstraintView>-->
+    <me.ibrahimsn.lib.SmoothBottomBar
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        app:backgroundColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu" />
+</androidx.constraintlayout.widget.ConstraintLayout>

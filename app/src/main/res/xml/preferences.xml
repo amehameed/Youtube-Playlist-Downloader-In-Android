@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:key="download_settings"
+
+        android:title="Download Settings">
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="enable_wifi"
+            android:title="Download only over WiFi" />
+        <ListPreference
+            android:dependency="enable_wifi"
+            android:dialogTitle="select downloads task count "
+            android:entries="@array/MaxDownloadsList"
+            android:entryValues="@array/MaxDownloadsListValues"
+            android:key="max_download_tasks"
+            android:summary="number of running downloads at a time."
+            android:title="Max download tasks" />
+
+        <SwitchPreference
+            android:editable="true"
+            android:key="fast_download"
+            android:title="Fast Download" />
+
+        <SwitchPreference
+            android:editable="true"
+            android:key="download_complete_notification"
+            android:title="Download complete notification" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="other_settings"
+
+        android:title="Other Settings">
+
+        <ListPreference
+            android:entries="@array/OnlineVideoQualityList"
+            android:entryValues="@array/OnlineVideoQualityListValues"
+            android:key="online_video_quality"
+            android:title="Online Video Quality" />
+
+
+        <ListPreference
+            android:entries="@array/PlayVideosWithList"
+
+            android:entryValues="@array/PlayVideosWithListValues"
+            android:key="play_videos_with"
+            android:title="Play videos with" />
+
+
+    </PreferenceCategory>
+
+
+
+</PreferenceScreen>

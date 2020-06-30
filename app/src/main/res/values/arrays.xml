@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="MaxDownloadsList">
+
+        <item>
+            1
+        </item>
+
+        <item>
+            2
+        </item>
+        <item>
+            3
+        </item>
+
+
+    </string-array>
+
+    <string-array name="MaxDownloadsListValues">
+
+        <item>
+            1
+        </item>
+
+        <item>
+            2
+        </item>
+        <item>
+            3
+        </item>
+
+
+    </string-array>
+
+    <string-array name="FastDownloadList">
+
+        <item>
+            1
+        </item>
+
+        <item>
+            2
+        </item>
+        <item>
+            3
+        </item>
+        <item>
+            4
+        </item>
+
+
+    </string-array>
+    <string-array name="FastDownloadListValues">
+
+        <item>
+            1
+        </item>
+
+        <item>
+            2
+        </item>
+        <item>
+            3
+        </item>
+        <item>
+            4
+        </item>
+
+
+    </string-array>
+
+    <string-array name="OnlineVideoQualityList">
+
+        <item>
+            high
+        </item>
+
+        <item>
+            medium
+        </item>
+        <item>
+            low
+        </item>
+
+    </string-array>
+
+    <string-array name="OnlineVideoQualityListValues">
+
+        <item>
+            high
+        </item>
+
+        <item>
+            medium
+        </item>
+        <item>
+            low
+        </item>
+
+    </string-array>
+
+    <string-array name="PlayVideosWithList">
+
+
+
+        <item>
+            External player
+        </item>
+
+
+    </string-array>
+    <string-array name="PlayVideosWithListValues">
+
+
+        <item>
+            External player
+        </item>
+
+
+    </string-array>
+
+</resources>

@@ -4,37 +4,11 @@
     >
 
     <item
+        app:showAsAction="always"
         android:id="@+id/download"
         android:icon="@drawable/ic_downward"
-        android:title="download"
-        app:showAsAction="always">
-
-    </item>
-
-    <item
-        android:id="@+id/downloadCustom"
-        android:icon="@drawable/ic_downward"
-        android:title="download"
-        app:showAsAction="collapseActionView">
-
-        <item
-            android:id="@+id/quality1"
-            android:icon="@drawable/ic_history_black_24dp"
-            android:title="144p"
-            app:showAsAction="collapseActionView" />
-
-        <item
-            android:id="@+id/quality2"
-            android:icon="@drawable/ic_downward"
-            android:title="240p"
-            app:showAsAction="collapseActionView" />
-
-        <item
-            android:id="@+id/quality3"
-            android:icon="@drawable/ic_downward"
-            android:title="360p"
-            app:showAsAction="collapseActionView" />
-
+        android:visible="false"
+        android:title="download">
 
     </item>
 
@@ -71,7 +45,4 @@
         android:id="@+id/downloads"
         android:icon="@drawable/ic_downward"
         android:title="Downloads"/>
-
-
-
 </menu>
